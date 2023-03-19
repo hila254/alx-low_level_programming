@@ -3,31 +3,27 @@
 /* more headers goes there */
 #include <stdio.h>
 /* betty style doc for function main goes there */
-
 /**
- * main - program print the last digit of the number stored in the variable
+ * main - Entry point
  *
- * Return: 0 success.
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	int n;
-	int last_int;/*come up with a variable last_int*/
+	int last_num;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
+	last_num = n % 10;
 
-	last_int = n % 10 /*This line computes the last digit of integer n by dividing the remainder by 10. The result is stored in last_int*/
-	
-	if (last_int > 5)
-		printf("Last digit of %d is %d and is greater than 5", n, last_int);
-	else if (last_int == 0)
-		printf("Last digit of %d is %d and is 0", n, last_int);
-	else if (last_int < 6 && last_int != 0)
-		printf("Last digit of %d is %d and is less than 6 and not 0", n, last_int);
-	printf("\n");
-	
+	if (last_num > 5)
+		printf("Last digit of %d is %d and is greater than 5\n", n, last_num);
+	else if (last_num == 0)
+		printf("Last digit of %d is %d and is 0\n", n, last_num);
+	else if (last_num < 6 && last_num != 0)
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, last_num);
+
 	return (0);
 }
