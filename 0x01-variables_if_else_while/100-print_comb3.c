@@ -1,28 +1,42 @@
 #include <stdio.h>
 
-/**
- * main - Prints the numbers from 00 to 99, numbers separated by
- *        a comma followed by a space, in ascending order.
- *
- * Return: Always 0.
- */
 int main(void)
 {
-	int num_x, num_y;
-	{
-	for (num_x = 0; num_x < 8; ++num_x)
+	int a, b, c;
 
+	for (a = 0; a < 9; a++)
+	{
+		for (b = a + 1; b < 10; b++)
 		{
-		for (num_y = num_x + 1; num_y = 10 ++num_y)
-			putchar(num_x + '0');
-			putchar(num_y + '0');
+			if (a == 0)
+			{
+				c = b;
+			}
+			else
+			{
+				c = (a * 10) + b;
+			}
+
+			if (c == 89)
+			{
+				putchar('8');
+				putchar('9');
+			}
+			else
+			{
+				putchar((c / 10) + '0');
+				putchar((c % 10) + '0');
+			}
+
+			if (a == 8 && b == 9)
+			{
+				continue;
+			}
+
 			putchar(',');
 			putchar(' ');
 		}
 	}
-	putchar(8 + '0');
-	putchar('9');
-	putchar('\n');
 
 	return (0);
 }
