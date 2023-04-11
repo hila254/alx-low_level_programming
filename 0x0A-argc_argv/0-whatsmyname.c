@@ -13,7 +13,7 @@
  * Return: Always 0 (on success)
  */
 
-int main(int argc __attribute__((unused)) argc, char *argv[])
+int main(int argc __attribute__((__unused__)) argc, char *argv[])
 {
 	printf("%s\n", argv[0]);
 
